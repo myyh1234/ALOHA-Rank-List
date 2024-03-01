@@ -1,0 +1,15 @@
+.show_solved tbody tr th:nth-child(2) a::before{
+    content: '❌';
+}
+
+.show_solved tbody tr.solved_all_essential th:nth-child(2) a::before{
+    content: '✅';
+}
+
+.user_id {
+    cursor: pointer
+}
+
+.total_score {
+    cursor: pointer
+}

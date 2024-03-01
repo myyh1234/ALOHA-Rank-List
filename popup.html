@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        input#essential {
+            margin-bottom: 1em;
+        }
+        button{
+            margin-top: 1em
+        }
+        input:focus{
+            outline: none
+        }
+        input{
+            /* border: none; */
+            border-bottom-style: thin solid; 
+            vertical-align: middle;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div>
+        <label for="essential">Essential problem</label>
+        <input type="text" name="essential" id="essential" placeholder="a b c / A B C / 1 2 3">
+    </div>
+    <div>
+        <label for="check_show">Show</label>
+        <input type="checkbox" name="show" id="check_show">
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
