@@ -13,3 +13,7 @@
 .total_score {
     cursor: pointer
 }
+
+#contest_scoreboard th {
+    white-space: nowrap;
+}

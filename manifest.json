@@ -12,10 +12,16 @@
     "content_scripts": [
         {
             "matches": [
-                "https://www.acmicpc.net/group/practice/view/17099/*"
+                "https://www.acmicpc.net/group/practice/view/17099/*", "https://www.acmicpc.net/group/practice/view/20229/*" 
             ],
             "js": ["content.js"],
             "css": ["content.css"]
+        },
+        {
+            "matches": [
+                "https://www.acmicpc.net/group/ranklist/17099", "https://www.acmicpc.net/group/ranklist/20229"
+            ],
+            "js": ["ranklist.js"]
         }
     ],
     "action": {

@@ -48,9 +48,9 @@ async function init() {
 async function update_show_state() {
     const state = await chrome.storage.session.get('show')
     if (state['show'])
-        document.body.classList.add('show_solved')
+        document.getElementById('contest_scoreboard').classList.add('show_solved')
     else
-        document.body.classList.remove('show_solved')
+        document.getElementById('contest_scoreboard').classList.remove('show_solved')
 }
 
 handle_list = init()
