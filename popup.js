@@ -14,9 +14,19 @@ chrome.storage.session.get('show')
         }
     })
 
+function url_match(url){
+    matches = ["https://www.acmicpc.net/group/practice/view/17099/", "https://www.acmicpc.net/group/practice/view/20229/"]
+    for (u of matches){
+        if (url.startsWith(u))
+            return true
+    }
+    return false
+}
+
 async function sendMessage_to_currentTab(msg){
     const [tab] = await chrome.tabs.query({ active: true, lastFocusedWindow: true })
-    chrome.tabs.sendMessage(tab.id, msg)
+    if (url_match(tab.url))
+        chrome.tabs.sendMessage(tab.id, msg)
 }
 
 essential.oninput = () => {

@@ -28,7 +28,7 @@
         "default_popup": "popup.html",
         "default_icon": "images/icon-128.png"
     },
-    "permissions": ["storage"],
+    "permissions": ["storage", "tabs"],
     "web_accessible_resources": [{
         "resources": ["list.csv"],
         "matches": [
@@ -37,5 +37,13 @@
     }],
     "background": {
         "service_worker": "background.js"
+    },
+    "externally_connectable":{
+        "ids": [
+            "*"
+        ],
+        "matches":[
+            "https://www.acmicpc.net/group/practice/view/17099/*", "https://www.acmicpc.net/group/practice/view/20229/*" 
+        ]
     }
 }
