@@ -13,13 +13,14 @@ function csv_parse(txt){
         now = b.split(',')
         obj = {}
         for (idx = 0; idx < head.length && idx < now.length; idx++){
-            if (head[idx] === '백준 핸들')
+            const column_name = head[idx].trim()
+            if (column_name === '백준 핸들')
                 obj.handle = now[idx]
-            else if (head[idx] === '이름')
+            else if (column_name === '이름')
                 obj.name = now[idx]
-            else if (head[idx] === '스터디 반' && now[idx] !== '')
+            else if (column_name === '스터디 반' && now[idx] !== '')
                 obj.division = now[idx]
-            else if (head[idx] === '멘토' && now[idx] !== '' && !('division' in obj))
+            else if (column_name === '멘토' && now[idx] !== '' && !('division' in obj))
                 obj.division = now[idx]
         }
         if (obj.division){
