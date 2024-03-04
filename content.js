@@ -133,7 +133,7 @@ function sort_table() {
 }
 
 table_header.children[1].title = '연습 순위 순으로 정렬됨\n클릭하여 필수문제 안 푼 순으로 정렬하기'
-table_header.children[table_header.children.length - 1].title = '연습 순위 순으로 정렬하기'
+table_header.children[0].title = '연습 순위 순으로 정렬하기'
 
 table_header.children[1].onclick = async (e) => {
     compare_id = (compare_id + 1) % compare_functions.length
@@ -144,7 +144,7 @@ table_header.children[1].onclick = async (e) => {
         `${compare_function_name[compare_id]} 순으로 정렬됨\n클릭하여 ${compare_function_name[(compare_id + 1) % compare_functions.length]} 순으로 정렬하기`
 }
 
-table_header.children[table_header.children.length - 1].onclick = (e) => {
+table_header.children[0].onclick = (e) => {
     compare_id = 0
     sort_table()
 }
