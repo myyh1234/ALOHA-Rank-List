@@ -35,6 +35,6 @@ essential.oninput = () => {
 }
 
 checkbox.onchange = () => {
-    chrome.storage.session.set({'show' : checkbox.value})
+    chrome.storage.session.set({'show' : checkbox.checked})
     sendMessage_to_currentTab("[ALOHA Rank List] show")
 }
