@@ -17,11 +17,13 @@ async function essential_solved(row) {
     if (!problems) return true
     for (let c of problems.toLowerCase().split(' ')) {
         if ('a' <= c && c <= 'z') {
-            if (!row.children[c.charCodeAt(0) - 'a'.charCodeAt(0) + 2].classList.contains('accepted'))
+            let idx = c.charCodeAt(0) - 'a'.charCodeAt(0) + 2
+            if (row.children[idx]?.classList.contains('accepted') === false)
                 return false
         }
         else if (parseInt(c) == c) {
-            if (!row.children[parseInt(c) + 1].classList.contains('accepted'))
+            let idx = parseInt(c) + 1
+            if (row.children[idx]?.classList.contains('accepted') === false)
                 return false;
         }
     }
