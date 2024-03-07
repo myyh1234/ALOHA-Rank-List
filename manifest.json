@@ -19,7 +19,7 @@
         },
         {
             "matches": [
-                "https://www.acmicpc.net/group/ranklist/17099", "https://www.acmicpc.net/group/ranklist/20229"
+                "https://www.acmicpc.net/group/ranklist/17099*", "https://www.acmicpc.net/group/ranklist/20229*"
             ],
             "js": ["ranklist.js"]
         }
