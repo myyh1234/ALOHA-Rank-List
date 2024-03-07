@@ -1,6 +1,6 @@
 function get_handle_from_row(row) {
     // copied from content.js
-    return row.children[1].children[0].innerText
+    return row.children[1].children[0].innerText.toLowerCase()
 }
 
 chrome.storage.local.get("handle_list").then((result) => {

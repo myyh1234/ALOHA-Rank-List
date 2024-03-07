@@ -8,7 +8,7 @@ const table_header = document.getElementById('contest_scoreboard')
     .children[0]
 
 function get_handle_from_row(row) {
-    return row.children[1].children[0].innerText
+    return row.children[1].children[0].innerText.toLowerCase()
 }
 
 async function essential_solved(row) {

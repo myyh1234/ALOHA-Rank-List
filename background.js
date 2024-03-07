@@ -15,7 +15,7 @@ function csv_parse(txt){
         for (idx = 0; idx < head.length && idx < now.length; idx++){
             const column_name = head[idx].trim()
             if (column_name === '백준 핸들')
-                obj.handle = now[idx]
+                obj.handle = now[idx].toLowerCase()
             else if (column_name === '이름')
                 obj.name = now[idx]
             else if (column_name === '스터디 반' && now[idx] !== '')
