@@ -10,7 +10,7 @@ chrome.storage.local.get("handle_list").then((result) => {
                         .getElementsByTagName('tr')
     for (const row of RANKLIST) {
         handle = get_handle_from_row(row)
-        if (handle_list.hasOwnProperty(handle)) {
+        if (handle_list?.hasOwnProperty(handle)) {
             info = handle_list[handle]
             row.children[1].innerHTML += `<br><span style='color:gray;font-size:x-small;'>${info['name'] + ' / ' + info['division']}</span>`
         }

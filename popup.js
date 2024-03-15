@@ -61,7 +61,6 @@ async function csv_parse(txt){
     const res = {}
     let [h, ...data] = txt.split('\n')
     head = h.trim().split(',')
-    // const encoder = new TextEncoder('euc-kr')
     for (b of data){
         now = b.split(',')
         obj = {}
@@ -78,13 +77,14 @@ async function csv_parse(txt){
             }
         }
         if (obj.division){
+            console.log(obj.division, obj.division.charCodeAt(0))
             if (obj.mentor) 
                 obj.division_priority = 10
-            else if (obj.division === '초급반')
+            else if (obj.division === '초급반' || obj.division.charCodeAt(0) === 52488)
                 obj.division_priority = 1
-            else if (obj.division === '중급반')
+            else if (obj.division === '중급반' || obj.division.charCodeAt(0) === 51473)
                 obj.division_priority = 2
-            else if (obj.division === '고급반')
+            else if (obj.division === '고급반' || obj.division.charCodeAt(0) === 44256)
                 obj.division_priority = 3
             else
                 obj.division_priority = 9999
